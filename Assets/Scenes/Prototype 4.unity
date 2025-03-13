@@ -397,6 +397,7 @@ MonoBehaviour:
   playerSpeed: 500
   playerRigidBody: {fileID: 275895449}
   focalPoint: {fileID: 0}
+  poweredUp: 0
 --- !u!1 &409433473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2122173727863782874, guid: 1f630b8c9aafc52449c149fb459c2ff3, type: 3}
@@ -787,6 +788,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7371421423368369765, guid: bd2e47624ab412d46a00527b13b936cd, type: 3}
       propertyPath: m_Name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371421423368369765, guid: bd2e47624ab412d46a00527b13b936cd, type: 3}
+      propertyPath: m_TagString
       value: PowerUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
