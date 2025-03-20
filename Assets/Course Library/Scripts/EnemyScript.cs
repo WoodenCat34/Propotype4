@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemeyScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     public float enemySpeed = 500.0f;
     private Rigidbody enemyRB;
