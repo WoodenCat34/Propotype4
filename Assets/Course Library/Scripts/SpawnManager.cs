@@ -1,12 +1,13 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManger : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
+    // Start is called before the first frame update
     public GameObject enemyPrefab;
     private float spawnRange = 10;
+    private int EnemyCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,8 @@ public class SpawnManger : MonoBehaviour
         SpawnEnemy(3);
     }
 
-    private void SpawnEnemy (int enemyCount) {
+    private void SpawnEnemy(int enemyCount)
+    {
         for (int i = 0; i < enemyCount; i++)
         {
 
@@ -29,7 +31,15 @@ public class SpawnManger : MonoBehaviour
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
 
         Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
-        return randomPos; 
+        return randomPos;
     }
-         
+
+    // Update is called once per frame
+    void Update()
+    {
+        EnemyCount = FindObjectsOfType<EnemyScript>().Length;
+        if (EnemyCount < 1) {
+            SpawnEnemy(3);
+        }
+    }
 }
