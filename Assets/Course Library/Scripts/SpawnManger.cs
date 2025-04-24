@@ -10,10 +10,17 @@ public class SpawnManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-       
-        Instantiate (enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-       
+
+        SpawnEnemy(3);
+    }
+
+    private void SpawnEnemy (int enemyCount) {
+        for (int i = 0; i < enemyCount; i++)
+        {
+
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+
+        }
     }
 
     private Vector3 GenerateSpawnPosition()
